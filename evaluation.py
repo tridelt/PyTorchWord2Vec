@@ -28,7 +28,7 @@ class Metrics():
     
 #    loads the corpus for all the following methods
     def retrieveCorpus(self):
-        corpus_filename = '../../data/EmoSim508.json'
+        corpus_filename = './data/EmoSim508.json'
         return open(corpus_filename).read()
     
 #    finds the relevant values from the corpus

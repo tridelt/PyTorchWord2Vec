@@ -3,7 +3,7 @@ import numpy as np
 class Preprocess():
 
     def __init__(self):
-        self.data_dir = '../../data/extracted_emoji_sequences.txt'
+        self.data_dir = './data/extracted_emoji_sequences.txt'
         self.window_size = 8
         self.word2idx = None
         self.idx2word = None
