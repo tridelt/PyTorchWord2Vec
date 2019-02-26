@@ -20,6 +20,7 @@ class Word2Vec(nn.Module):
         
     def forward(self, u_pos, v_pos):
         embed_u = self.u_embeddings(u_pos)
+
         return self.loss(t.matmul(embed_u, t.t(self.v_embeddings.weight.data)), v_pos)
     
     def input_embeddings(self):
