@@ -6,6 +6,7 @@ def createWordPairs(indexes, tokens, window_size):
         
     # for each sentence        
     for sentence in tokens.tokenzied_corpus:
+#         if it can be indexed else skip to next iteration
         try:
             indices = [indexes.word2idx[word] for word in sentence]
         except Exception as e: print(e)
