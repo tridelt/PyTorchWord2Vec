@@ -11,7 +11,8 @@ def createWordPairs(indexes, tokens, window_size):
 #         if it can be indexed else skip to next iteration
         try:
             indices = [indexes.word2idx[word] for word in sentence]
-        except Exception as e: print(e)
+        except: 
+            continue
         # for each word, threated as center word
         for center_word_pos in range(len(indices)):
             # for each window position
