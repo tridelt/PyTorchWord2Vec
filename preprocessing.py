@@ -19,7 +19,6 @@ class Preprocess():
         corpus = open(self.data_dir).read().splitlines()
 
         tokenized_corpus = self.tokenize_corpus(corpus)
-#         should I set a threshold?
         emojiSequences = self.onlyEmojiSequences(tokenized_corpus)
 
         vocabulary = []
@@ -28,7 +27,7 @@ class Preprocess():
                 if token not in vocabulary:
                     vocabulary.append(token)
 
-        self.tokenzied_corpus = tokenized_corpus
+        self.tokenzied_corpus = emojiSequences
         self.word2idx = {w: idx for (idx, w) in enumerate(vocabulary)}
         self.idx2word = {idx: w for (idx, w) in enumerate(vocabulary)}
         self.vocabulary_size = len(vocabulary)
