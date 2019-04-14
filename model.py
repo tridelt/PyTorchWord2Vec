@@ -24,7 +24,9 @@ class Word2Vec(nn.Module):
         return self.loss(t.matmul(embed_u, t.t(self.v_embeddings.weight.data)), v_pos)
     
     def input_embeddings(self):
-        return self.u_embeddings.weight.data.cpu().numpy()
+        return self.u_embeddings
+    
+#     .weight.data.cpu().numpy()
 
 
 
