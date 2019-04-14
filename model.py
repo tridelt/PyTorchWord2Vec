@@ -9,8 +9,8 @@ class Word2Vec(nn.Module):
         super(Word2Vec, self).__init__()
         
         max_norm = 1
-        self.u_embeddings = nn.Embedding(vocab_size, embedding_dim, max_norm)
-        self.v_embeddings = nn.Embedding(vocab_size, embedding_dim, max_norm)
+        self.u_embeddings = nn.Embedding(vocab_size, embedding_dim, max_norm=0.002)
+        self.v_embeddings = nn.Embedding(vocab_size, embedding_dim, max_norm=0.002)
         
 #        initializing the weights of the embeddings
 #        same initialization technique as @theeluwin https://github.com/theeluwin/pytorch-sgns.git
