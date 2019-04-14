@@ -7,8 +7,7 @@ from torch import FloatTensor as FT
 class Word2Vec(nn.Module):
     def __init__(self, vocab_size, embedding_dim):
         super(Word2Vec, self).__init__()
-        
-        max_norm = 1
+
         self.u_embeddings = nn.Embedding(vocab_size, embedding_dim)
         self.v_embeddings = nn.Embedding(vocab_size, embedding_dim)
         
@@ -25,8 +24,3 @@ class Word2Vec(nn.Module):
     
     def input_embeddings(self):
         return self.u_embeddings
-    
-#     .weight.data.cpu().numpy()
-
-
-
