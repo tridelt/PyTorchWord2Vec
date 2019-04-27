@@ -11,3 +11,7 @@ class LoadedDataSet(Dataset):
     def __getitem__(self, idx):
         context, target = self.data[idx]
         return context, target
+    
+    def __label__(self, idx):
+        context, _ = self.data[idx]
+        return context
