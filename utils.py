@@ -2,6 +2,7 @@ import numpy as np
 import torch
 import os
 
+
     # creates wordPairs for the Training & Validation Set
 def createWordPairs(indexes, tokens, window_size):
     idx_pairs = []
@@ -25,6 +26,9 @@ def createWordPairs(indexes, tokens, window_size):
                 idx_pairs.append((indices[center_word_pos], context_word_idx))
     return np.array(idx_pairs)
 
+
+
+
 class AverageMeter():
     """Computes and stores the average and current value"""
     def __init__(self):
@@ -43,6 +47,8 @@ class AverageMeter():
         self.sum += val * n
         self.count += n
         self.avg = self.sum / self.count
+        
+        
         
         
 class EarlyStopping:
